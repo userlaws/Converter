@@ -49,6 +49,7 @@ The Modern File Converter is a web application that allows users to convert file
      ```
      NEXT_PUBLIC_CONVERTIO_API_KEY=your_api_key_here
      ```
+     - This is where you can get your own API https://developers.convertio.co/
 
 ### Running the Application
 
