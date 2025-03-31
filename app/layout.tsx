@@ -1,7 +1,9 @@
 import './globals.css';
 import { Metadata } from 'next';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://converter-chi-three.vercel.app'),
   title: 'Modern File Converter - Fast, Secure, and Easy File Conversion',
   description:
     'Convert your files quickly and securely with our Modern File Converter. Supports various formats including PDF, JPG, PNG, and more.',
@@ -43,7 +45,16 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <head />
-      <body>{children}</body>
+      <body>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
